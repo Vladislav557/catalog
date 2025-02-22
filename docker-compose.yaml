@@ -1,0 +1,17 @@
+networks:
+  docker_net:
+    external: true
+
+services:
+  postgres-test-catalog-db:
+    image: postgres:16-alpine
+    hostname: postgres-test-catalog-db
+    container_name: postgres-test-catalog-db
+    environment:
+      POSTGRES_USER: "dev"
+      POSTGRES_DB: "catalog"
+      POSTGRES_PASSWORD: "dev"
+    ports:
+      - "54324:5432"
+    networks:
+      - docker_net

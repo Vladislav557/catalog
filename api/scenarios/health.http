@@ -1,0 +1,3 @@
+### GET health
+GET {{host}}/catalog/api1/health
+Content-Type: application/json
